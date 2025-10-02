@@ -1,0 +1,22 @@
+version: 2
+
+sources:
+  - name: datafeed_shared_schema
+    database: "{{('SEPTEMBER')}}"
+    schema: RAW_SCHEMA
+    tables:
+      - name: RAW_CUSTOMER
+      - name: EMP_SAL
+      - name: RAW_PRODUCTS
+      - name: RAW_ORDERS
+        columns: 
+          - name: id
+            tests: 
+              - unique
+              - not_null
+          
+          - name: status
+            tests: 
+              - accepted_values:
+                  values: ['placed', 'shipped', 'completed', 'returned', 'return_pending']
+          
