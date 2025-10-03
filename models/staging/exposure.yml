@@ -19,7 +19,6 @@ exposures:
       - ref('Orders')
       - ref('employees_salary')
       - ref('seed_data')
-      - ref('snap_customers_timestamp')
       - ref('snap_orders_check')
 
       - source('datafeed_shared_schema','RAW_ORDERS')

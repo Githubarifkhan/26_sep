@@ -10,6 +10,6 @@
         )
     }}
 
-    select * from {{ source('datafeed_shared_schema', 'RAW_ORDERS') }} limit 10
+    select * from {{ source('datafeed_shared_schema', 'RAW_ORDERS') }}
 
 {% endsnapshot %}
